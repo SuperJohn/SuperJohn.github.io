@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Charger Installation in Moorpark & Ventura County | The Standard Electric</title>
+  <meta name="description" content="Residential Level 2 EV charger installation in Moorpark, Thousand Oaks, Simi Valley, Camarillo, and Ventura County. Standard installs typically range from $650-$850. Free site visits available. Call or text 805-991-2639." />
+
+  <style>
+    :root {
+      --navy: #0A2E5C;
+      --navy-dark: #082547;
+      --text: #0f172a;
+      --muted: #5b6472;
+      --light: #f7f8fa;
+      --border: #d8dee8;
+      --white: #ffffff;
+      --soft-navy: rgba(10,46,92,0.08);
+      --shadow: rgba(15,23,42,0.07);
+      --radius: 18px;
+      --radius-lg: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    .eyebrow,
+    nav,
+    .btn,
+    .trust-inline,
+    .price-label,
+    .project-label,
+    .form-title,
+    .field label,
+    .quick-facts dt,
+    .footer-brand {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+    .brand { min-width: 250px; display: flex; align-items: center; }
+    .brand-logo-img { width: 250px; display: block; }
+    nav { display: flex; align-items: center; gap: 24px; font-size: 12px; font-weight: 900; color: #334155; }
+    nav a:hover { color: var(--navy); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      background: var(--navy);
+      color: white;
+      font-weight: 900;
+      padding: 13px 22px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(10,46,92,0.16);
+      transition: background 0.2s ease, transform 0.2s ease;
+      text-align: center;
+      border: 0;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .btn:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    .btn.secondary { background: white; color: var(--navy); border: 1px solid var(--border); box-shadow: none; }
+    .btn.full { width: 100%; }
+
+    .hero {
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: start;
+      gap: 48px;
+      padding: 58px 0 44px;
+    }
+    .eyebrow {
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.08;
+      margin: 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+    h1 { font-size: clamp(38px, 5.2vw, 58px); letter-spacing: -0.035em; max-width: 720px; }
+    h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.025em; }
+    h3 { font-size: 22px; }
+    .lead { font-size: 19px; color: var(--muted); max-width: 700px; margin: 20px 0 0; }
+    .hero-price { color: var(--navy); font-weight: 900; margin-top: 18px; font-size: 18px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .trust-inline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+      font-size: 11px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+    .trust-inline span {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 10px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .site-visit-card {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: 0 14px 34px var(--shadow);
+    }
+    .form-title { color: var(--navy); font-weight: 900; font-size: 13px; margin-bottom: 8px; }
+    .site-visit-card h2 { font-size: 34px; }
+    .site-visit-card p { color: var(--muted); margin: 12px 0 20px; }
+    .lead-form { display: grid; gap: 12px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field { display: grid; gap: 6px; }
+    .field label { font-size: 11px; font-weight: 900; color: #334155; }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 14px;
+      font: inherit;
+      color: var(--text);
+      background: white;
+    }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: 13px; margin: 0; }
+
+    section { padding: 66px 0; }
+    .section-title { text-align: center; max-width: 790px; margin: 0 auto 38px; }
+    .section-title p { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .price-card, .process-card, .faq-card, .project-card, .fact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 8px 18px rgba(15,23,42,0.04);
+    }
+    .price-card.featured { border-color: rgba(10,46,92,0.36); box-shadow: 0 14px 30px rgba(10,46,92,0.09); }
+    .price-label { color: var(--navy); font-size: 11px; font-weight: 900; }
+    .price { color: var(--navy); font-size: 30px; font-weight: 900; margin: 12px 0 8px; letter-spacing: -0.035em; }
+    .price-card p, .process-card p, .faq-card p, .project-card p, .fact-card p { color: var(--muted); margin: 10px 0 0; }
+    .included-list { margin: 24px auto 0; max-width: 880px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0; list-style: none; }
+    .included-list li { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; color: #334155; font-weight: 800; background: white; }
+    .price-note { text-align: center; color: var(--muted); max-width: 860px; margin: 22px auto 0; font-size: 15px; }
+
+    .projects { background: var(--light); }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project-card { padding: 12px; overflow: hidden; }
+    .project-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 14px; display: block; background: var(--light); }
+    .project-card .copy { padding: 16px 8px 8px; }
+    .project-label { color: var(--navy); font-size: 11px; font-weight: 900; margin-bottom: 8px; }
+    .project-card h3 { font-size: 21px; }
+
+    .process-grid, .faq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .process-card span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--soft-navy);
+      color: var(--navy);
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .process-card h3, .faq-card h3 { font-size: 20px; }
+
+    .quick-facts-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 28px; align-items: start; }
+    .quick-facts { margin: 0; display: grid; grid-template-columns: 1fr 1.35fr; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: white; }
+    .quick-facts dt, .quick-facts dd { margin: 0; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+    .quick-facts dt { color: var(--navy); font-size: 11px; font-weight: 900; background: var(--light); }
+    .quick-facts dd { color: #334155; font-weight: 700; }
+    .quick-facts dt:last-of-type, .quick-facts dd:last-of-type { border-bottom: 0; }
+
+    .contact { background: var(--navy); color: white; text-align: center; }
+    .contact h2 { color: white; }
+    .contact p { color: rgba(255,255,255,0.82); font-size: 18px; max-width: 760px; margin: 16px auto 0; }
+    .contact .cta-row { justify-content: center; }
+    .contact .btn.secondary { border-color: rgba(255,255,255,0.35); color: white; background: transparent; }
+
+    footer { border-top: 1px solid var(--border); padding: 34px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .footer-brand { color: var(--navy); font-weight: 900; font-size: 12px; }
+    .footer-small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+    .mobile-call { display: none; }
+
+    @media (max-width: 1024px) {
+      .trust-inline, .pricing-grid, .project-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid, .faq-grid { grid-template-columns: repeat(2, 1fr); }
+      .quick-facts-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      nav, .desktop-call { display: none; }
+      .hero-grid { grid-template-columns: 1fr; padding: 44px 0 36px; }
+      .site-visit-card { order: -1; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
+      .mobile-call {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 40;
+      }
+      .mobile-call .btn { padding-left: 12px; padding-right: 12px; font-size: 12px; }
+      body { padding-bottom: 86px; }
+    }
+    @media (max-width: 560px) {
+      .container { padding: 0 18px; }
+      .brand, .brand-logo-img { width: 235px; min-width: 235px; }
+      .cta-row .btn, .pricing-grid, .project-grid, .process-grid, .faq-grid, .trust-inline, .form-row, .included-list { grid-template-columns: 1fr; width: 100%; }
+      .cta-row .btn { display: flex; }
+      section { padding: 54px 0; }
+      .site-visit-card { padding: 22px; }
+      .quick-facts { grid-template-columns: 1fr; }
+      .quick-facts dt { border-bottom: 0; padding-bottom: 4px; }
+      .quick-facts dd { padding-top: 4px; }
+    }
+  
+    /* Standardized site header across all pages */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+    .brand {
+      min-width: 250px;
+      width: 250px;
+      display: flex;
+      align-items: center;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .brand-logo-img {
+      width: 250px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    nav a:hover { color: var(--navy); }
+    .btn.desktop-call {
+      min-height: 48px;
+      white-space: nowrap;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 900;
+    }
+    @media (max-width: 900px) {
+      nav, .desktop-call { display: none; }
+    }
+    @media (max-width: 560px) {
+      .brand, .brand-logo-img {
+        width: 235px;
+        min-width: 235px;
+      }
+    }
+
+  
+    .project-card-link {
+      display: block;
+      color: inherit;
+      height: 100%;
+      border-radius: var(--radius);
+    }
+    .project-card-link:hover .project-card {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(10,46,92,0.10);
+      border-color: rgba(10,46,92,0.32);
+    }
+    .project-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="The Standard Electric & Power Company home">
+        <img class="brand-logo-img" src="assets/logo-standard-header-compact.png" alt="The Standard Electric & Power Company logo" />
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#pricing">Pricing</a>
+        <a href="services.html">Services</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="#projects">Project Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn desktop-call" href="tel:8059912639">Call/Text 805-991-2639</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Residential Level 2 EV Charging</div>
+          <h1>EV charger installation in Moorpark & Ventura County.</h1>
+          <p class="lead">Clean, planned residential Level 2 EV charger installation for Tesla, Rivian, Ford, ChargePoint, Emporia, Wallbox, and other home charging systems.</p>
+          <div class="hero-price">Standard installations typically range from $650–$850.</div>
+          <div class="cta-row">
+            <a class="btn" href="#site-visit">Request Free Site Visit</a>
+            <a class="btn secondary" href="tel:8059912639">Call/Text 805-991-2639</a>
+          </div>
+          <div class="trust-inline" aria-label="Key trust points">
+            <span>Owner-Operated</span>
+            <span>20+ Years Combined Experience</span>
+            <span>Free Site Visits</span>
+            <span>No Guesswork. No Surprises.</span>
+          </div>
+        </div>
+
+        <aside class="site-visit-card" id="site-visit" aria-label="Request a free EV charger site visit">
+          <div class="form-title">Free EV Charger Site Visit</div>
+          <h2>Get a clear install plan.</h2>
+          <p>Send your details and we’ll review the charger location, panel capacity, and likely installation path.</p>
+          <form class="lead-form" name="ev-site-visit" method="POST" action="thank-you.html">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Moorpark, Thousand Oaks, Simi Valley..." />
+            </div>
+            <div class="field">
+              <label for="charger">Charger / Vehicle</label>
+              <input id="charger" name="charger" type="text" placeholder="Tesla Wall Connector, ChargePoint, Rivian, Ford..." />
+            </div>
+            <div class="field">
+              <label for="message">Install Notes</label>
+              <textarea id="message" name="message" placeholder="Panel location, charger location, garage or exterior wall..."></textarea>
+            </div>
+            <button class="btn full" type="submit">Request Free Site Visit</button>
+            <p class="form-note">Prefer direct contact? Call or text <strong>805-991-2639</strong>.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">Clear Pricing</div>
+          <h2>Know the likely range before the visit.</h2>
+          <p>Pricing depends on panel capacity, charger location, wire path, distance, wall type, and whether panel work is needed.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card featured">
+            <div class="price-label">Standard Installation</div>
+            <div class="price">$650–$850</div>
+            <h3>Typical garage or nearby panel install.</h3>
+            <p>Best fit when the panel and charger location are close with a clean installation path.</p>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Enhanced Installation</div>
+            <div class="price">$850–$1,350</div>
+            <h3>Longer run or more complex routing.</h3>
+            <p>For added distance, exterior routing, conduit work, or more involved installation conditions.</p>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Charger + Panel Upgrade</div>
+            <div class="price">$3,000–$4,000</div>
+            <h3>When the existing panel needs more capacity.</h3>
+            <p>For homes that need panel replacement or electrical capacity upgrades before charging.</p>
+          </article>
+        </div>
+        <ul class="included-list" aria-label="Typical installation items">
+          <li>Dedicated 240V EV charging circuit</li>
+          <li>Breaker and wiring matched to charger requirements</li>
+          <li>Surface-mounted conduit when needed</li>
+          <li>Charger mounting, connection, and final testing</li>
+        </ul>
+        <p class="price-note">Already purchased your charger? Customer-supplied Tesla, ChargePoint, Emporia, Wallbox, Rivian, Ford, and other Level 2 chargers are welcome.</p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">Actual Project Work</div>
+          <h2>Clean electrical work, planned before installation starts.</h2>
+          <p>Real residential work examples: EV charging, panel upgrades, sub panels, and backup generator electrical connections.</p>
+        </div>
+        <div class="project-grid">
+          <a class="project-card-link" href="services.html#ev-charging" aria-label="View service details">
+            <article class="project-card">
+            <img src="assets/projects/EV Charger Installation.jpg" alt="Residential Level 2 EV charger installed in garage with clean conduit routing" loading="lazy" />
+            <div class="copy">
+              <div class="project-label">EV Charger Installation</div>
+              <h3>Level 2 charger with clean conduit routing.</h3>
+              <p>Wall-mounted charger installation with a planned circuit path and tidy surface conduit.</p>
+            </div>
+          </article>
+          </a>
+          <a class="project-card-link" href="services.html#panel-upgrades" aria-label="View service details">
+            <article class="project-card">
+            <img src="assets/projects/200A Panel Upgrade_05.jpg" alt="Completed 200 amp residential electrical panel upgrade" loading="lazy" />
+            <div class="copy">
+              <div class="project-label">Panel Capacity Upgrade</div>
+              <h3>200A panel upgrade for added electrical capacity.</h3>
+              <p>Panel replacement work for homes that need more capacity before EV charging or added loads.</p>
+            </div>
+          </article>
+          </a>
+          <a class="project-card-link" href="services.html#generator-backup" aria-label="View service details">
+            <article class="project-card">
+            <img src="assets/projects/Backup Generator Installation_02.jpg" alt="Residential backup generator installation with electrical connection" loading="lazy" />
+            <div class="copy">
+              <div class="project-label">Backup Power</div>
+              <h3>Backup generator support for outage protection.</h3>
+              <p>We help homeowners prepare for power interruptions with clean generator electrical connections and planned backup power integration.</p>
+            </div>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">Simple Process</div>
+          <h2>No guesswork. No surprises.</h2>
+          <p>The goal is a clear plan before installation begins.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <span>1</span>
+            <h3>Request a visit.</h3>
+            <p>Call, text, or send the form with your charger and vehicle details.</p>
+          </article>
+          <article class="process-card">
+            <span>2</span>
+            <h3>Review the panel.</h3>
+            <p>We look at electrical capacity, breaker space, and the best route to the charger.</p>
+          </article>
+          <article class="process-card">
+            <span>3</span>
+            <h3>Confirm the range.</h3>
+            <p>You get a clear installation plan and pricing range before work starts.</p>
+          </article>
+          <article class="process-card">
+            <span>4</span>
+            <h3>Install cleanly.</h3>
+            <p>The charger is mounted, connected, and tested with a clean finished layout.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">FAQ</div>
+          <h2>Common EV charger installation questions.</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>Can you install a Tesla Wall Connector?</h3>
+            <p>Yes. Tesla Wall Connector and other customer-supplied Level 2 chargers are supported.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Do I need a panel upgrade?</h3>
+            <p>Not always. The panel is reviewed first to confirm available capacity and the best installation path.</p>
+          </article>
+          <article class="faq-card">
+            <h3>How much does a typical install cost?</h3>
+            <p>Standard installations typically range from $650–$850. More involved installs may range from $850–$1,350.</p>
+          </article>
+          <article class="faq-card">
+            <h3>What areas do you serve?</h3>
+            <p>Moorpark, Thousand Oaks, Simi Valley, Camarillo, Newbury Park, Westlake Village, and nearby communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.82);">Ready for a clear install plan?</div>
+        <h2>Call, text, or request a free EV charger site visit.</h2>
+        <p>Fast response. Clean planning. Professional residential installation.</p>
+        <div class="cta-row">
+          <a class="btn" href="#site-visit">Request Free Site Visit</a>
+          <a class="btn secondary" href="tel:8059912639">Call/Text 805-991-2639</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">The Standard Electric & Power Company</div>
+        <div class="footer-small">Engineering & Installation · Moorpark & Ventura County</div>
+      </div>
+      <div class="footer-small">Call/Text: <a href="tel:8059912639">805-991-2639</a></div>
+    </div>
+  </footer>
+
+  <div class="mobile-call" aria-label="Mobile contact actions">
+    <a class="btn" href="#site-visit">Free Site Visit</a>
+    <a class="btn secondary" href="tel:8059912639">Call/Text</a>
+  </div>
+</body>
+</html>

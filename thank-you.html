@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | The Standard Electric & Power Company</title>
+  <meta name="description" content="Thank you for contacting The Standard Electric & Power Company." />
+  <style>
+
+    :root {
+      --navy: #0A2E5C;
+      --navy-dark: #082547;
+      --text: #0f172a;
+      --muted: #5b6472;
+      --light: #f7f8fa;
+      --border: #d8dee8;
+      --white: #ffffff;
+      --soft-navy: rgba(10,46,92,0.08);
+      --shadow: rgba(15,23,42,0.06);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--border); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 0; }
+    .brand { display: flex; align-items: center; color: var(--navy); line-height: 1; min-width: 220px; }
+    .brand-mark { display: flex; flex-direction: column; align-items: center; color: var(--navy); }
+    .brand-topline { display: flex; align-items: center; gap: 8px; width: 100%; justify-content: center; margin-bottom: 1px; }
+    .brand-rule { height: 2px; width: 42px; background: var(--navy); transform: skewX(-18deg); display: inline-block; }
+    .brand-bolt { width: 17px; height: 24px; display: inline-block; }
+    .brand-the { font-family: Georgia, 'Times New Roman', serif; font-size: 11px; line-height: 1; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: -4px; }
+    .brand-main { font-family: Georgia, 'Times New Roman', serif; text-transform: uppercase; font-weight: 700; letter-spacing: 0.02em; font-size: 30px; line-height: .86; }
+    .brand-sub { font-family: Georgia, 'Times New Roman', serif; margin-top: 5px; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; font-weight: 700; border-top: 2px solid var(--navy); border-bottom: 2px solid var(--navy); padding: 2px 0; width: 100%; text-align: center; }
+    .brand-tag { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 12px; margin-top: 5px; color: var(--navy-dark); }
+    .brand-logo-img { height: 58px; width: auto; display: block; }
+    nav { display: flex; align-items: center; gap: 26px; font-size: 14px; font-weight: 700; color: #334155; }
+    nav a:hover { color: var(--navy); }
+    .btn { display: inline-block; background: var(--navy); color: white; font-weight: 700; padding: 13px 22px; border-radius: 10px; box-shadow: 0 8px 18px rgba(10,46,92,0.16); transition: background 0.2s ease, transform 0.2s ease; text-align: center; border: 0; cursor: pointer; font-size: 15px; font-family: Arial, Helvetica, sans-serif; }
+    .btn:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    .btn.secondary { background: white; color: var(--navy); border: 1px solid var(--border); box-shadow: none; }
+    .hero { background: linear-gradient(180deg, white 0%, var(--light) 100%); border-bottom: 1px solid var(--border); }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; align-items: center; gap: 54px; padding: 70px 0; }
+    .eyebrow { color: var(--navy); font-weight: 900; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; margin-bottom: 16px; }
+    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; line-height: 1.1; margin: 0; color: var(--text); }
+    h1 { font-size: clamp(38px, 5.2vw, 60px); letter-spacing: -0.035em; }
+    h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.025em; }
+    h3 { font-size: 24px; }
+    .lead { font-size: 19px; color: var(--muted); max-width: 680px; margin: 22px 0 0; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .trust-line { margin-top: 20px; font-size: 15px; color: var(--muted); font-weight: 700; }
+    .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 24px; max-width: 720px; }
+    .trust-pill { border: 1px solid var(--border); background: white; color: var(--navy); border-radius: 10px; padding: 12px 10px; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; text-align: center; box-shadow: 0 4px 12px rgba(15,23,42,0.03); }
+    .hero-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 16px; box-shadow: 0 12px 30px var(--shadow); }
+    .card-inner { background: var(--navy); color: white; border-radius: 18px; padding: 32px; text-align: center; }
+    .card-logo-word { font-family: Georgia, 'Times New Roman', serif; color: white; text-transform: uppercase; font-weight: 700; letter-spacing: .03em; font-size: 34px; line-height: 1; margin-top: 8px; }
+    .card-inner h3 { color: white; margin-top: 16px; }
+    .card-inner p { color: rgba(255,255,255,0.82); margin-top: 14px; }
+    .mini-list { display: grid; gap: 10px; margin-top: 22px; text-align: left; }
+    .mini-item { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 13px 15px; font-weight: 800; }
+    section { padding: 70px 0; }
+    .section-title { text-align: center; max-width: 790px; margin: 0 auto 42px; }
+    .section-title p { color: var(--muted); font-size: 18px; margin-top: 16px; }
+    .pricing-grid, .process-grid, .faq-grid, .city-grid { display: grid; gap: 18px; }
+    .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    .process-grid, .faq-grid { grid-template-columns: repeat(4, 1fr); }
+    .city-grid { grid-template-columns: repeat(4, 1fr); }
+    .price-card, .process-card, .faq-card, .city-card { background: white; border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: 0 8px 18px rgba(15,23,42,0.04); }
+    .price-card.featured { border-color: rgba(10,46,92,0.32); box-shadow: 0 14px 30px rgba(10,46,92,0.09); }
+    .price { color: var(--navy); font-size: 28px; font-weight: 900; margin: 14px 0 10px; letter-spacing: -0.03em; }
+    .price-card p, .process-card p, .faq-card p, .city-card p { color: var(--muted); margin-bottom: 0; }
+    .price-note { text-align: center; color: var(--muted); max-width: 820px; margin: 26px auto 0; font-size: 15px; }
+    .approach { background: var(--light); }
+    .process-card span { display: inline-flex; width: 34px; height: 34px; border-radius: 10px; background: var(--soft-navy); color: var(--navy); align-items: center; justify-content: center; font-weight: 900; margin-bottom: 18px; }
+    .process-card h3, .faq-card h3, .city-card h3 { font-size: 20px; }
+    .contact-card { max-width: 920px; margin: 0 auto; background: var(--light); border: 1px solid var(--border); border-radius: 24px; padding: 48px 32px; }
+    .contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 32px; align-items: start; }
+    .phone-block { margin-top: 24px; color: var(--navy); text-align: left; }
+    .phone-label { font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; }
+    .phone-number { font-family: Georgia, 'Times New Roman', serif; font-size: 40px; line-height: 1.05; margin-top: 6px; font-weight: 700; display: inline-block; }
+    .contact-card p { color: var(--muted); font-size: 18px; margin: 18px 0 0; }
+    .contact-meta { margin-top: 24px; display: grid; gap: 10px; color: #334155; font-size: 15px; font-weight: 700; }
+    .lead-form { display: grid; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 13px; font-weight: 900; color: #334155; }
+    .field input, .field select, .field textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 13px 14px; font: inherit; color: var(--text); background: white; }
+    .field textarea { min-height: 118px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: 13px; margin: 0; }
+    .navy-band { background: var(--navy); color: white; text-align: center; }
+    .navy-band h2 { color: white; }
+    .navy-band p { color: rgba(255,255,255,0.82); font-size: 18px; max-width: 760px; margin: 18px auto 0; }
+    footer { border-top: 1px solid var(--border); padding: 36px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .footer-brand { font-family: Georgia, 'Times New Roman', serif; color: var(--navy); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+    .footer-small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .mobile-call { display: none; }
+    @media (max-width: 1024px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } .process-grid, .faq-grid, .city-grid { grid-template-columns: repeat(2, 1fr); } .trust-strip { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 900px) { nav { display: none; } .desktop-call { display: none; } .hero-grid, .contact-grid { grid-template-columns: 1fr; } .hero-grid { padding: 58px 0; } .footer-grid { flex-direction: column; align-items: flex-start; } .mobile-call { display: block; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 20; } body { padding-bottom: 82px; } }
+    @media (max-width: 560px) { .container { padding: 0 18px; } .brand-main { font-size: 24px; } .brand-sub { font-size: 8px; } .brand-tag { font-size: 10px; } .brand-rule { width: 28px; } .pricing-grid, .process-grid, .faq-grid, .city-grid, .trust-strip, .form-row { grid-template-columns: 1fr; } .cta-row .btn { width: 100%; } section { padding: 56px 0; } .card-inner { padding: 26px; } .phone-number { font-size: 34px; } }
+
+.thank-you-wrap { min-height: 62vh; display: flex; align-items: center; justify-content: center; text-align: center; } .thank-you-card { max-width: 760px; background: var(--light); border: 1px solid var(--border); border-radius: 24px; padding: 52px 32px; box-shadow: 0 12px 30px rgba(15,23,42,0.05); }
+  
+    /* Standardized site header across all pages */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+    .brand {
+      min-width: 250px;
+      width: 250px;
+      display: flex;
+      align-items: center;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .brand-logo-img {
+      width: 250px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    nav a:hover { color: var(--navy); }
+    .btn.desktop-call {
+      min-height: 48px;
+      white-space: nowrap;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 900;
+    }
+    @media (max-width: 900px) {
+      nav, .desktop-call { display: none; }
+    }
+    @media (max-width: 560px) {
+      .brand, .brand-logo-img {
+        width: 235px;
+        min-width: 235px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html#home" class="brand" aria-label="The Standard Electric & Power Company home">
+        <img class="brand-logo-img" src="assets/logo-standard-header-compact.png" alt="The Standard Electric & Power Company logo" />
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#pricing">Pricing</a>
+        <a href="services.html">Services</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="index.html#projects">Project Work</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn desktop-call" href="tel:8059912639">Call/Text 805-991-2639</a>
+    </div>
+  </header>
+<main><section class="thank-you-wrap"><div class="container"><div class="thank-you-card"><div class="eyebrow">Request Received</div><h1>Thank you.</h1><p class="lead" style="margin-left: auto; margin-right: auto;">We received your EV charger site visit request. The Standard Electric &amp; Power Company will review your message and respond as soon as available.</p><div class="phone-block" style="text-align: center;"><div class="phone-label">Call or Text</div><a class="phone-number" href="tel:8059912639">805-991-2639</a></div><div class="cta-row" style="justify-content: center;"><a class="btn" href="index.html">Return Home</a><a class="btn secondary" href="services.html">View Services</a></div></div></div></section></main>
+
+  <footer><div class="container footer-grid"><div><div class="footer-brand">The Standard Electric &amp; Power Company</div><div class="footer-small">Engineering &amp; Installation</div><div class="footer-small">EV Charger Installation • Panel Capacity Review • Residential Power Upgrades</div><div class="footer-small">Serving Moorpark, Thousand Oaks, Simi Valley, Camarillo, Newbury Park, Westlake Village, Agoura Hills, Oak Park, Somis, Santa Rosa Valley, Lake Sherwood, and nearby communities</div></div><a class="btn" href="tel:8059912639">Call or Text 805-991-2639</a></div></footer>
+  <a class="btn mobile-call" href="tel:8059912639">Call or Text 805-991-2639</a>
+</body>
+</html>
