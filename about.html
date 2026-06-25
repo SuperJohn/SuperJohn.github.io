@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | The Standard Electric & Power Company</title>
+  <meta name="description" content="Meet Kyle Knapp, the founder of The Standard Electric & Power Company, bringing 22 years of engineering and electrical trade experience to Moorpark and Ventura County." />
+
+  <style>
+    :root {
+      --navy: #0A2E5C;
+      --navy-dark: #082547;
+      --text: #0f172a;
+      --muted: #5b6472;
+      --light: #f7f8fa;
+      --border: #d8dee8;
+      --white: #ffffff;
+      --soft-navy: rgba(10,46,92,0.08);
+      --shadow: rgba(15,23,42,0.07);
+      --radius: 18px;
+      --radius-lg: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    .eyebrow, nav, .btn, .footer-brand {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+    .brand { min-width: 250px; display: flex; align-items: center; }
+    .brand-logo-img { width: 250px; display: block; }
+    nav { display: flex; align-items: center; gap: 24px; font-size: 12px; font-weight: 900; color: #334155; text-align: center; }
+    nav a { line-height: 1.1; display: flex; align-items: center; justify-content: center; width: 70px; }
+    nav a:hover { color: var(--navy); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      background: var(--navy);
+      color: white;
+      font-weight: 900;
+      padding: 13px 22px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(10,46,92,0.16);
+      transition: background 0.2s ease, transform 0.2s ease;
+      text-align: center;
+      border: 0;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .btn:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    .btn.secondary { background: white; color: var(--navy); border: 1px solid var(--border); box-shadow: none; }
+
+    h1, h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.08;
+      margin: 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+    h1 { font-size: clamp(38px, 5.2vw, 58px); letter-spacing: -0.035em; }
+    h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.025em; }
+
+    .about-section { padding: 80px 0; background: linear-gradient(180deg, white 0%, var(--light) 100%); border-bottom: 1px solid var(--border); }
+    .about-founder-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .about-box { background: white; padding: 48px; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: 0 14px 34px var(--shadow); }
+    .about-box p { color: var(--muted); font-size: 17px; margin-bottom: 18px; line-height: 1.6; }
+    .about-image { width: 100%; border-radius: var(--radius-lg); box-shadow: 0 14px 34px var(--shadow); object-fit: cover; aspect-ratio: 4/5; background: var(--border); }
+
+    .navy-band { background: var(--navy); color: white; text-align: center; padding: 66px 0; }
+    .navy-band h2 { color: white; }
+    .navy-band p { color: rgba(255,255,255,0.82); font-size: 18px; max-width: 760px; margin: 18px auto 0; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; justify-content: center; }
+
+    footer { border-top: 1px solid var(--border); padding: 34px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .footer-brand { color: var(--navy); font-weight: 900; font-size: 12px; }
+    .footer-small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+    .mobile-call { display: none; }
+
+    @media (max-width: 900px) {
+      nav, .desktop-call { display: none; }
+      .about-founder-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-box { padding: 32px; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
+      .mobile-call {
+        display: flex;
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 40;
+      }
+      .mobile-call .btn { width: 100%; font-size: 15px; padding: 16px; box-shadow: 0 8px 24px rgba(10,46,92,0.3); }
+      body { padding-bottom: 86px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html#home" class="brand" aria-label="The Standard Electric & Power Company home">
+        <img class="brand-logo-img" src="assets/logo-standard-header-compact.png" alt="The Standard Electric & Power Company logo" />
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#pricing">Pricing</a>
+        <a href="services.html">Services</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="about.html">About</a>
+        <a href="index.html#projects">Project Work</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn desktop-call" href="index.html#site-visit">Get Free Site Visit</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="container about-founder-grid">
+        <div class="about-box">
+          <div class="eyebrow" style="color: var(--navy); font-weight: 900; font-size: 12px; margin-bottom: 14px;">Meet the Founder & Owner</div>
+          <h1 style="margin-bottom: 24px;">Kyle Knapp</h1>
+          <p>"I started The Standard Electric & Power Company after 22 years of working my way up through the electrical trades and the professional engineering world.</p>
+          <p>My career started hands-on in the construction trades. For ten years, I focused heavily on electrical work in the pool industry, tackling residential, commercial, and even marine projects. Working in the field is what actually paid my way through college to earn my Bachelor of Science in Mechanical Engineering.</p>
+          <p>After getting my degree, my career took me across the globe. I worked as a field engineer in the oil and gas industry, handling complex electrical and corrosion engineering sites worldwide. From there, I transitioned into rail transportation, working my way up the corporate ladder into major electrical design and project management.</p>
+          <p>But after more than two decades in the corporate engineering world, I knew it was time to get back to my roots, work directly with people, and start my own business right here in the community.</p>
+          <p>When you hire The Standard Electric & Power Company, you are getting the practical, hands-on grit of a lifelong tradesman combined with the exact precision of a professional engineer. Whether we are wiring a new EV charger, upgrading your main panel, or setting up a home battery system, you deal directly with me. No rotating crews, no corporate runaround, and no shortcuts—just safe, clean, and dependable electrical work."</p>
+        </div>
+        <div>
+          <!-- Inside about.html -->
+<img src="assets/profile-picture.jpg" alt="Kyle Knapp, Founder" class="about-image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="navy-band">
+      <div class="container">
+        <h2>Ready for a clear install plan?</h2>
+        <p>No guesswork. No surprises. Request a free site visit to review your panel capacity and get an exact quote.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="index.html#site-visit">Request Free Site Visit</a>
+          <a class="btn secondary" href="tel:8059912639" style="background: transparent; color: white; border-color: rgba(255,255,255,0.35);">Call/Text 805-991-2639</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">The Standard Electric & Power Company</div>
+        <div class="footer-small">Engineering & Installation · Moorpark & Ventura County</div>
+      </div>
+      <div class="footer-small">Call/Text: <a href="tel:8059912639">805-991-2639</a></div>
+    </div>
+  </footer>
+
+  <div class="mobile-call" aria-label="Mobile contact actions">
+    <a class="btn" href="tel:8059912639">📞 Tap to Call: 805-991-2639</a>
+  </div>
+</body>
+</html>
